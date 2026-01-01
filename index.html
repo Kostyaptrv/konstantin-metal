@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Константин — Хэви Метал</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>💀 Константин</h1>
+      <p>Хэви-Метал • Голос ярости • Гитара как оружие</p>
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#music">Музыка</a>
+        <a href="#gallery">Фото</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="section hero">
+    <div class="container">
+      <h2>Добро пожаловать в огонь!</h2>
+      <p>Я — <strong>Константин</strong>, начинающий хэви-метал артист из <strong>Москвы</strong>. Мои песни — это крик души, гнев, сила и чистая энергия. Я не пою — я реву.</p>
+      <a href="#music" class="btn">Включить ад</a>
+    </div>
+  </section>
+
+  <section id="music" class="section">
+    <div class="container">
+      <h2>Моя музыка</h2>
+      <div class="music-grid">
+        <div class="track">
+          <h3>Трек 1: "Гнев стальных небес"</h3>
+          <audio controls>
+            <source src="audio/track1.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+          </audio>
+        </div>
+        <div class="track">
+          <h3>Трек 2: "Огонь внутри"</h3>
+          <audio controls>
+            <source src="audio/track2.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+          </audio>
+        </div>
+      </div>
+      <p>Или слушайте меня на:</p>
+      <div class="links">
+        <a href="https://open.spotify.com/artist/..." target="_blank">Spotify</a> |
+        <a href="https://youtube.com/..." target="_blank">YouTube</a> |
+        <a href="https://vk.com/music/..." target="_blank">ВКонтакте</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Фото</h2>
+      <div class="gallery-grid">
+        <img src="images/photo1.jpg" alt="Выступление в клубе" />
+        <img src="images/photo2.jpg" alt="Запись в студии" />
+        <img src="images/photo3.jpg" alt="С гитарой" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Связь с адом</h2>
+      <p>Готов к сотрудничеству. Пиши — обсудим выступления, релизы или просто поговорим о металле.</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Сообщение" rows="5" required></textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+      <div class="social-links">
+        <a href="https://t.me/konstantin_metal" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://instagram.com/konstantin_metal" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://vk.com/konstantin_metal" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Константин. Все права не защищены — рви гитару!</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
