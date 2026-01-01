@@ -263,7 +263,6 @@ body {
   .nav a {
     display: inline-block;
   }
-
 }
 /* Процесс создания */
 #process {
@@ -443,5 +442,71 @@ body {
 #status-percent {
   font-weight: bold;
 }
+/* Тёплый метал — цвета */
+:root {
+  --primary: #d6336c;     /* Тёплый бордовый */
+  --secondary: #0d47a1;   /* Глубокий синий */
+  --bg-dark: #0a0f1d;
+  --text-light: #e0e0e0;
+  --text-muted: #aaaaaa;
+  --card-bg: rgba(20, 25, 40, 0.7);
+}
 
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1620374097554-4c0f1fed26ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
 
+.header {
+  background: rgba(10, 15, 30, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--primary);
+}
+
+.header h1 {
+  color: var(--primary);
+  text-shadow: 0 0 15px rgba(214, 51, 108, 0.4);
+}
+
+.nav a {
+  color: var(--text-light);
+  border: 1px solid var(--primary);
+}
+
+.nav a:hover {
+  background: var(--primary);
+}
+
+.btn {
+  background: linear-gradient(45deg, var(--primary), #ff5c8d);
+  box-shadow: 0 6px 15px rgba(214, 51, 108, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
+}
+
+.step {
+  background: var(--card-bg);
+  border: 1px solid rgba(214, 51, 108, 0.3);
+}
+
+.step h3 {
+  color: var(--primary);
+}
+
+.ai-disclaimer {
+  color: var(--text-muted);
+  border-color: var(--primary);
+}
+
+.footer {
+  background: rgba(10, 15, 30, 0.9);
+  border-top: 1px solid rgba(214, 51, 108, 0.3);
+}
