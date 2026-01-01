@@ -263,4 +263,45 @@ body {
   .nav a {
     display: inline-block;
   }
+
+}
+/* Процесс создания */
+#process {
+  background: rgba(10, 10, 20, 0.8);
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.process-steps {
+  display: grid;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+.step {
+  background: rgba(30, 30, 50, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #5500aa;
+  transition: 0.3s;
+}
+
+.step:hover {
+  background: rgba(40, 40, 70, 0.7);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(80, 0, 200, 0.2);
+}
+
+.step h3 {
+  color: #9d4edd;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+#process em {
+  color: #aaa;
+  font-style: italic;
+  font-size: 1.1rem;
 }
