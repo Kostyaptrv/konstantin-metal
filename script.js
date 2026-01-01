@@ -1,4 +1,4 @@
-d// Эмуляция процесса загрузки ИИ
+// Эмуляция процесса загрузки ИИ
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
   const loaderText = document.getElementById("loader-text");
@@ -57,3 +57,4 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Сообщение отправлено в центр управления ИИ.");
   this.reset();
 });
+
