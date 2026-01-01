@@ -57,4 +57,3 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   alert("Сообщение отправлено в центр управления ИИ.");
   this.reset();
 });
-
