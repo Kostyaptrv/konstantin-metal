@@ -305,3 +305,65 @@ body {
   font-style: italic;
   font-size: 1.1rem;
 }
+/* Процесс с ИИ */
+#process {
+  background: rgba(10, 10, 20, 0.85);
+  border-top: 1px solid #2c2c54;
+  border-bottom: 1px solid #2c2c54;
+  color: #ddd;
+}
+
+.process-steps {
+  display: grid;
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+.step {
+  background: rgba(30, 30, 50, 0.7);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #4834d4;
+  transition: 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.step:hover {
+  background: rgba(50, 50, 90, 0.8);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(72, 52, 212, 0.3);
+  border-color: #6c5ce7;
+}
+
+.step h3 {
+  color: #a29bfe;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step h3::before {
+  content: "🤖";
+}
+
+.ai-disclaimer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(60, 60, 100, 0.3);
+  border: 1px dashed #6c5ce7;
+  border-radius: 10px;
+  font-style: italic;
+  color: #b3b3ff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ai-disclaimer strong {
+  color: #fff;
+}
+
