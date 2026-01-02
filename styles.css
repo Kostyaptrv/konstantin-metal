@@ -442,71 +442,86 @@ body {
 #status-percent {
   font-weight: bold;
 }
-/* Тёплый метал — цвета */
+/* Нейтрально-эмоциональная палитра */
 :root {
-  --primary: #d6336c;     /* Тёплый бордовый */
-  --secondary: #0d47a1;   /* Глубокий синий */
-  --bg-dark: #0a0f1d;
-  --text-light: #e0e0e0;
-  --text-muted: #aaaaaa;
-  --card-bg: rgba(20, 25, 40, 0.7);
+  --primary: #5d4099;     /* Фиолетово-синий — баланс разума и чувств */
+  --secondary: #7b68ee;   /* Мягкий сине-фиолетовый */
+  --bg-dark: #0f121a;
+  --text-light: #d0d0e0;
+  --text-muted: #9090a0;
+  --card-bg: rgba(30, 35, 55, 0.7);
+  --border: rgba(93, 64, 153, 0.4);
 }
 
 body {
   background: var(--bg-dark);
   color: var(--text-light);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1620374097554-4c0f1fed26ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-image: linear-gradient(
+    rgba(10, 15, 30, 0.8),
+    rgba(20, 25, 40, 0.9)
+  ), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: overlay;
 }
 
 .header {
-  background: rgba(10, 15, 30, 0.9);
+  background: rgba(15, 20, 35, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--primary);
+  border-bottom: 1px solid var(--border);
 }
 
 .header h1 {
   color: var(--primary);
-  text-shadow: 0 0 15px rgba(214, 51, 108, 0.4);
+  text-shadow: 0 0 12px rgba(93, 64, 153, 0.3);
 }
 
 .nav a {
   color: var(--text-light);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--border);
 }
 
 .nav a:hover {
   background: var(--primary);
+  color: white;
 }
 
 .btn {
-  background: linear-gradient(45deg, var(--primary), #ff5c8d);
-  box-shadow: 0 6px 15px rgba(214, 51, 108, 0.4);
+  background: linear-gradient(45deg, var(--primary), #7b68ee);
+  box-shadow: 0 6px 15px rgba(93, 64, 153, 0.3);
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
+  box-shadow: 0 8px 20px rgba(93, 64, 153, 0.5);
 }
 
-.step {
+.track, .step {
   background: var(--card-bg);
-  border: 1px solid rgba(214, 51, 108, 0.3);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.track:hover, .step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(93, 64, 153, 0.2);
 }
 
 .step h3 {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .ai-disclaimer {
+  background: rgba(40, 45, 65, 0.4);
+  border: 1px dashed var(--secondary);
   color: var(--text-muted);
-  border-color: var(--primary);
 }
 
 .footer {
   background: rgba(10, 15, 30, 0.9);
-  border-top: 1px solid rgba(214, 51, 108, 0.3);
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
 }
