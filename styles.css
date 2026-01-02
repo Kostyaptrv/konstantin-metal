@@ -570,3 +570,28 @@ body {
 .logo-letter:nth-child(8) { animation-delay: 0.8s; }
 .logo-letter:nth-child(9) { animation-delay: 0.9s; }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-family: 'Courier New', monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(93, 64, 153, 0.4);
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  filter: drop-shadow(0 0 5px rgba(93, 64, 153, 0.5));
+  transition: 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
