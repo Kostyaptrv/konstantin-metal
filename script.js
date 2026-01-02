@@ -1,7 +1,6 @@
-// Эмуляция процесса загрузки ИИ
+// Загрузка ИИ
 document.addEventListener("DOMContentLoaded", function () {
   const loader = document.getElementById("loader");
-  const loaderText = document.getElementById("loader-text");
   const progressFill = document.getElementById("progress");
   const status = document.getElementById("status");
   const statusPercent = document.getElementById("status-percent");
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const msgIndex = Math.floor((progress / 100) * messages.length);
     status.textContent = messages[msgIndex] || "Готово...";
-    statusPercent.textContent = progress < 100 ? Math.round(progress) + "%" : "100%";
 
     if (progress >= 100) {
       clearInterval(interval);
@@ -34,13 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
         loader.style.transition = "opacity 1.5s ease";
         setTimeout(() => {
           loader.style.display = "none";
-          document.body.style.overflow = "auto"; // Разрешаем скролл
+          document.body.style.overflow = "auto";
         }, 1500);
       }, 300);
     }
   }, 400);
 
-  // На случай, если DOM загрузился медленно
   setTimeout(() => {
     if (progress < 100) {
       progress = 100;
@@ -51,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 7000);
 });
 
-// Форма обратной связи
+// Форма
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Сообщение отправлено в центр управления ИИ.");
