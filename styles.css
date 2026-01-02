@@ -525,3 +525,48 @@ body {
   border-top: 1px solid var(--border);
   color: var(--text-muted);
 }
+.logo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  color: #5d4099;
+  text-shadow: 0 0 8px rgba(93, 64, 153, 0.3);
+}
+
+.logo-letter {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.logo-letter:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px #7b68ee;
+  color: #7b68ee !important;
+}
+
+/* Эффект "цифрового включения" при загрузке (опционально) */
+.logo-letter {
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-letter:nth-child(1) { animation-delay: 0.1s; }
+.logo-letter:nth-child(2) { animation-delay: 0.2s; }
+.logo-letter:nth-child(3) { animation-delay: 0.3s; }
+.logo-letter:nth-child(4) { animation-delay: 0.4s; }
+.logo-letter:nth-child(5) { animation-delay: 0.5s; }
+.logo-letter:nth-child(6) { animation-delay: 0.6s; }
+.logo-letter:nth-child(7) { animation-delay: 0.7s; }
+.logo-letter:nth-child(8) { animation-delay: 0.8s; }
+.logo-letter:nth-child(9) { animation-delay: 0.9s; }
+
