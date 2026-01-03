@@ -469,4 +469,16 @@ body {
 .header h1, .btn, .nav a {
   font-family: 'Orbitron', 'Impact', sans-serif;
 }
+.btn:hover {
+  animation: pulse 0.7s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 10px var(--secondary), 0 0 20px rgba(200, 0, 50, 0.3);
+  }
+  to {
+    box-shadow: 0 0 15px var(--secondary), 0 0 30px rgba(200, 0, 50, 0.6);
+  }
+}
 
