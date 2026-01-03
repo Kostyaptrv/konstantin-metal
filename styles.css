@@ -538,5 +538,66 @@ body::after {
     box-shadow: 0 0 15px var(--secondary), 0 0 30px rgba(200, 0, 50, 0.6);
   }
 }
+/* Молнии */
+.lightning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.bolt {
+  position: absolute;
+  background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.2));
+  border-radius: 2px;
+  box-shadow: 0 0 20px #ff0, 0 0 40px #f0f;
+  opacity: 0;
+  animation: flash 3s infinite;
+}
+
+.bolt:nth-child(1) {
+  width: 4px;
+  height: 120px;
+  left: 30%;
+  top: 20%;
+  animation-delay: 0.5s;
+}
+
+.bolt:nth-child(2) {
+  width: 3px;
+  height: 80px;
+  left: 70%;
+  top: 40%;
+  animation-delay: 1.7s;
+}
+
+.bolt:nth-child(3) {
+  width: 5px;
+  height: 150px;
+  left: 10%;
+  top: 60%;
+  animation-delay: 2.5s;
+}
+
+@keyframes flash {
+  0%, 97% {
+    opacity: 0;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+  }
+  98% {
+    opacity: 1;
+    box-shadow: 0 0 20px #ff0, 0 0 40px #f0f;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 
