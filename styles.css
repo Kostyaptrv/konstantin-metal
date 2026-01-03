@@ -466,3 +466,7 @@ body {
     font-size: 0.95rem;
   }
 }
+.header h1, .btn, .nav a {
+  font-family: 'Orbitron', 'Impact', sans-serif;
+}
+
