@@ -48,6 +48,48 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 7000);
 });
 
+// Пульс
+setInterval(() => {
+  const pulse = 70 + Math.sin(Date.now() / 1000) * 5;
+  document.getElementById('pulse').textContent = Math.round(pulse);
+}, 800);
+
+// Сбой ИИ
+setInterval(() => {
+  const glitch = document.createElement('div');
+  glitch.classList.add('glitch-alert');
+  glitch.textContent = '⚠️ СБОЙ: ЭМОЦИОНАЛЬНЫЙ КОНТУР НАРУШЕН';
+  document.body.appendChild(glitch);
+  setTimeout(() => glitch.remove(), 1200);
+}, 30000);
+
+// Режим гитары
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.altKey && (e.key === 'm' || e.key === 'M')) {
+    document.body.classList.add('guitar-mode');
+    alert('🎸 РЕЖИМ ГИТАРЫ АКТИВИРОВАН');
+    setTimeout(() => {
+      document.body.classList.remove('guitar-mode');
+    }, 5000);
+  }
+});
+
+// Загрузка трека
+document.querySelectorAll('audio').forEach(audio => {
+  audio.addEventListener('play', function () {
+    const trackName = this.closest('.track').querySelector('h3').textContent;
+    showLoaderTrack(trackName);
+  });
+});
+
+function showLoaderTrack(name) {
+  const loader = document.createElement('div');
+  loader.classList.add('track-loader');
+  loader.innerHTML = `🔊 ИНИЦИАЛИЗАЦИЯ ТРЕКА:<br><strong>${name}</strong>`;
+  document.body.appendChild(loader);
+  setTimeout(() => loader.remove(), 2500);
+}
+
 // Форма
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
