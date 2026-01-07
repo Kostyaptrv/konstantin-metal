@@ -74,22 +74,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Загрузка трека
-document.querySelectorAll('audio').forEach(audio => {
-  audio.addEventListener('play', function () {
-    const trackName = this.closest('.track').querySelector('h3').textContent;
-    showLoaderTrack(trackName);
-  });
-});
-
-function showLoaderTrack(name) {
-  const loader = document.createElement('div');
-  loader.classList.add('track-loader');
-  loader.innerHTML = `🔊 ИНИЦИАЛИЗАЦИЯ ТРЕКА:<br><strong>${name}</strong>`;
-  document.body.appendChild(loader);
-  setTimeout(() => loader.remove(), 2500);
-}
-
 // Форма
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
