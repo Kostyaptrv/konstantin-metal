@@ -49,31 +49,31 @@
   </section>
 
   <!-- Музыка -->
-<section id="music" class="section">
-  <div class="container">
-    <h2>Моя музыка</h2>
-    <div class="music-grid">
-      <div class="track">
-        <h3>Трек 1: "Осенний дождь"</h3>
-        <audio controls>
-          <source src="audio/Осенний дождь.mp3" type="audio/mpeg">
-          Ваш браузер не поддерживает аудио.
-        </audio>
+  <section id="music" class="section">
+    <div class="container">
+      <h2>Моя музыка</h2>
+      <div class="music-grid">
+        <div class="track">
+          <h3>Трек 1: "Гнев стальных небес"</h3>
+          <audio controls>
+            <source src="audio/demo1.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+          </audio>
+        </div>
+        <div class="track">
+          <h3>Трек 2: "Огонь внутри"</h3>
+          <audio controls>
+            <source src="audio/demo2.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+          </audio>
+        </div>
       </div>
-      <div class="track">
-        <h3>Трек 2: "Огонь внутри"</h3>
-        <audio controls>
-          <source src="audio/demo2.mp3" type="audio/mpeg">
-          Ваш браузер не поддерживает аудио.
-        </audio>
+      <p>Слушайте в:</p>
+      <div class="links">
+        <a href="https://music.yandex.ru/artist/konstantin" target="_blank">🎵 Яндекс.Музыка</a>
       </div>
     </div>
-    <p>Слушайте в:</p>
-    <div class="links">
-      <a href="https://music.yandex.ru/artist/konstantin" target="_blank">🎵 Яндекс.Музыка</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Процесс -->
   <section id="process" class="section">
@@ -131,12 +131,14 @@
     <div class="container">
       <h2>Связь</h2>
       <p>Готов к сотрудничеству. Пиши — обсудим выступления, релизы.</p>
-      <form id="contactForm" class="contact-form">
-        <input type="text" placeholder="Ваше имя" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Сообщение" rows="5" required></textarea>
+
+      <form action="https://formspree.io/f/xlggrjbd" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Сообщение" rows="5" required></textarea>
         <button type="submit" class="btn">Отправить</button>
       </form>
+
       <div class="social-links">
         <a href="https://t.me/konstantin_metal" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
         <a href="https://vk.com/konstantin_metal" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
@@ -158,11 +160,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
